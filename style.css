@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.hero {
+    background-color: (#000000);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    position: relative;
+}
+
+.hero ::before {
+    content: '';
+    position:absolute 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.navbar .logo {
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.navbar .nav-links {
+    display: block;
+    list-style: none;
+   
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+    border-top: 1px solid #000000;
+}
+
+.navbar .nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #333d33;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    background-color: #ffffff;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.paintings {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.paintings-card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.paintings-card {
+    background-color: beige;
+    color: #000000;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 200px;
+    transition: transform .3s;
+}
+
+
+
+@media all and (max-width: 480px) {
+
+    .menu {
+        display: block;
+        position: center;
+        right: 10px;
+        top: 15px;
+    }
+    .nav-bar {
+        flex-direction: column;
+    }
+    .navbar .logo {
+        font-size: 1.5em;
+        color: #000000;
+    }
+    
+    .navbar .nav-links {
+        display: none;
+        list-style: none;
+       
+    }
+    
+    .navbar .nav-links li {
+        margin: 0 10px;
+        border-top: 1px solid #000000;
+    }
+    
+    .navbar .nav-links li a {
+        color: #000000;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .menu-line {
+        width: 20px;
+        height: 3px;
+        background-color: #000000;
+        margin-bottom: 4px;
+        display: block;
+        margin: 4px auto;
+    }
+    
+    .active {
+        display: block;
+    }
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
